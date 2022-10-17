@@ -1,0 +1,22 @@
+version: "3.9"
+services:
+  java1:
+    image: openjdk:19
+    container_name: java1
+    ports:
+    - "8080:8080"
+    command: ["bin/bash"]
+    volumes:
+    - ./:/code
+    stdin_open: true
+    tty: true
+  java2:
+    image: openjdk:19
+    container_name: java2
+    ports:
+    - "8081:8080"
+    command: ["bin/bash"]
+    volumes:
+    - ./:/code
+    stdin_open: true
+    tty: true
